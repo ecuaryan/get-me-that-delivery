@@ -170,6 +170,7 @@ button:focus {
 
 .social-media-links{
   font-size: 35px;
+  text-align: right;
 }
 
 @media only screen and (max-width : 992px) {
