@@ -85,6 +85,7 @@ body{
 }
 
 #store-closed-overlay{
+  display: none;
   position: absolute;
   top: 0;
   width: 100%;
@@ -93,6 +94,10 @@ body{
   background: rgba(100, 100, 100);
   background: rgba(100, 100, 100, 0.7);
   border-radius: 10px;
+}
+
+#store-closed-overlay.store-is-closed{
+  display: block;
 }
 
 #store-closed-overlay .message-container{

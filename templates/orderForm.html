@@ -14,10 +14,9 @@
     <input type="text" placeholder="From Where?" name="source" class="form-field">
     <textarea placeholder="What would you like?" name="instructions" class="form-field textarea-field"></textarea>
     <button class="primary-button">GET ME THAT</button>
-    <div id="store-closed-overlay">
-      <div class="message-container">
-        <div>Sorry, we're closed right now...</div>
-        <div>but we shall return!</div>
+    <div id="store-closed-overlay" ng-class="{'store-is-closed': !vm.storeState.storeOpen}">
+      <div class="message-container" ng-bind-html="vm.storeState.closedMessageHtml">
+
       </div>
     </div>
   </div>
