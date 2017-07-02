@@ -8,13 +8,13 @@
   </div>
   <div class="row order-form-container">
     <form name="orderForm" ng-submit="vm.postOrder(vm.order)">
-      <input type="text" placeholder="Name" ng-model="vm.order.recipientName" class="form-field" required>
-      <input type="email" placeholder="Email" ng-model="vm.order.recipientEmail" class="form-field" required>
-      <input type="phone" placeholder="Phone" ng-model="vm.order.recipientPhone" class="form-field" required>
-      <input type="text" placeholder="Address (Rexburg)" ng-model="vm.order.recipientAddress" class="form-field" required>
-      <input type="text" placeholder="From Where?" ng-model="vm.order.sourceName" class="form-field" required>
-      <textarea placeholder="What would you like?" ng-model="vm.order.orderDescription" class="form-field textarea-field" required></textarea>
-      <button type="submit" class="primary-button">GET ME THAT</button>
+      <input type="text" placeholder="Name" ng-model="vm.order.recipientName" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
+      <input type="email" placeholder="Email" ng-model="vm.order.recipientEmail" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
+      <input type="phone" placeholder="Phone" ng-model="vm.order.recipientPhone" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
+      <input type="text" placeholder="Address (Rexburg)" ng-model="vm.order.recipientAddress" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
+      <input type="text" placeholder="From Where?" ng-model="vm.order.sourceName" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
+      <textarea placeholder="What would you like?" ng-model="vm.order.orderDescription" class="form-field textarea-field" required ng-disabled="!vm.storeState.storeOpen"></textarea>
+      <button type="submit" class="primary-button" ng-disabled="!vm.storeState.storeOpen">GET ME THAT</button>
     </form>
 
     <div id="store-closed-overlay" ng-class="{'store-is-closed': !vm.storeState.storeOpen}">
