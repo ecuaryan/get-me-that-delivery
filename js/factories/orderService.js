@@ -3,7 +3,7 @@ app.factory('OrderService', function (CONFIG, $http) {
 
   orderService.postOrder = function (order) {
     return $http
-      .post(CONFIG.baseUrl + CONFIG.stagePath + CONFIG.orderUrl, order)
+      .post(CONFIG.baseUrl + CONFIG.stage + CONFIG.orderEndpoint, order)
       .then(function (res) {
         return res;
       });

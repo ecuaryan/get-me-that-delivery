@@ -6,7 +6,7 @@
       <div class="avg-wait-time-under">Average delivery time: under 35 minutes</div>
     </div>
   </div>
-  <div class="row order-form-container">
+  <div class="row form-container">
     <form name="orderForm" ng-submit="vm.postOrder(vm.order)">
       <input type="text" placeholder="Name" ng-model="vm.order.recipientName" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
       <input type="email" placeholder="Email" ng-model="vm.order.recipientEmail" class="form-field" required ng-disabled="!vm.storeState.storeOpen">
@@ -16,7 +16,6 @@
       <textarea placeholder="What would you like?" ng-model="vm.order.orderDescription" class="form-field textarea-field" required ng-disabled="!vm.storeState.storeOpen"></textarea>
       <button type="submit" class="primary-button" ng-disabled="!vm.storeState.storeOpen">GET ME THAT</button>
     </form>
-
     <div id="store-closed-overlay" ng-class="{'store-is-closed': !vm.storeState.storeOpen}">
       <div class="message-container" ng-bind-html="vm.storeState.closedMessageHtml"></div>
     </div>

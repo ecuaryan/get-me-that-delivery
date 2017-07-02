@@ -3,7 +3,7 @@ app.factory('StateService', function (CONFIG, $http, StoreState) {
 
   stateService.getStoreState = function () {
     return $http
-      .get(CONFIG.baseUrl + CONFIG.stagePath + CONFIG.stateUrl)
+      .get(CONFIG.baseUrl + CONFIG.stage + CONFIG.stateEndpoint)
       .then(function (res) {
         StoreState.create(res.data.storeState);
         return res.data.storeState;

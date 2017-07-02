@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+  <div class="row form-container">
+    <form name="contactForm" ng-submit="vm.postMessage(vm.message)">
+      <input type="text" placeholder="Name" ng-model="vm.message.name" class="form-field">
+      <input type="email" placeholder="Email" ng-model="vm.message.email" class="form-field" required>
+      <input type="phone" placeholder="Phone" ng-model="vm.message.phone" class="form-field">
+      <textarea placeholder="How can we help?" ng-model="vm.message.body" class="form-field textarea-field" required></textarea>
+      <button type="submit" class="primary-button">SEND MESSAGE</button>
+    </form>
+  </div>
+</div>
