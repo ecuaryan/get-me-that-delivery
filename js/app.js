@@ -3,7 +3,7 @@ app.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
   $routeProvider.when('/', {
     templateUrl: 'templates/orderForm.html',
-    controller: 'orderController as vm'
+    controller: 'OrderController as vm'
   }).when('/frequently-asked-questions', {
     templateUrl: 'templates/faq.html'
   }).when('/about-us', {
@@ -12,5 +12,8 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 app.constant('CONFIG', {
-  storeStateUrl: 'https://2vv8rth4gd.execute-api.us-east-2.amazonaws.com/prod/state'
+  baseUrl: 'https://2vv8rth4gd.execute-api.us-east-2.amazonaws.com',
+  stagePath: '/prod',
+  stateUrl: '/state',
+  orderUrl: '/order'
 });

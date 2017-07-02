@@ -6,18 +6,19 @@
       <div class="avg-wait-time-under">Average delivery time: under 35 minutes</div>
     </div>
   </div>
-  <div class="row delivery-form-container">
-    <input type="text" placeholder="Name" name="name" class="form-field">
-    <input type="email" placeholder="Email" name="email" class="form-field">
-    <input type="phone" placeholder="Phone" name="phone" class="form-field">
-    <input type="text" placeholder="Address (Rexburg)" name="address" class="form-field">
-    <input type="text" placeholder="From Where?" name="source" class="form-field">
-    <textarea placeholder="What would you like?" name="instructions" class="form-field textarea-field"></textarea>
-    <button class="primary-button">GET ME THAT</button>
-    <div id="store-closed-overlay" ng-class="{'store-is-closed': !vm.storeState.storeOpen}">
-      <div class="message-container" ng-bind-html="vm.storeState.closedMessageHtml">
+  <div class="row order-form-container">
+    <form name="orderForm" ng-submit="vm.postOrder(vm.order)">
+      <input type="text" placeholder="Name" ng-model="vm.order.recipientName" class="form-field" required>
+      <input type="email" placeholder="Email" ng-model="vm.order.recipientEmail" class="form-field" required>
+      <input type="phone" placeholder="Phone" ng-model="vm.order.recipientPhone" class="form-field" required>
+      <input type="text" placeholder="Address (Rexburg)" ng-model="vm.order.recipientAddress" class="form-field" required>
+      <input type="text" placeholder="From Where?" ng-model="vm.order.sourceName" class="form-field" required>
+      <textarea placeholder="What would you like?" ng-model="vm.order.orderDescription" class="form-field textarea-field" required></textarea>
+      <button type="submit" class="primary-button">GET ME THAT</button>
+    </form>
 
-      </div>
+    <div id="store-closed-overlay" ng-class="{'store-is-closed': !vm.storeState.storeOpen}">
+      <div class="message-container" ng-bind-html="vm.storeState.closedMessageHtml"></div>
     </div>
   </div>
   <div class="row text-center credit-card-text-container">
