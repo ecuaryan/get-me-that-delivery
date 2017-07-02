@@ -12,5 +12,5 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 app.constant('CONFIG', {
-  storeStateUrl: 'https://2vv8rth4gd.execute-api.us-east-2.amazonaws.com/prod/getConfigSettings'
-})
+  storeStateUrl: 'https://2vv8rth4gd.execute-api.us-east-2.amazonaws.com/prod/state'
+});

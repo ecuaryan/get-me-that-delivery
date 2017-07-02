@@ -5,7 +5,7 @@ app.factory('StoreService', function (CONFIG, $http, StoreState) {
     return $http
       .get(CONFIG.storeStateUrl)
       .then(function (res) {
-        StoreState.create(res.data);
+        StoreState.create(res.data.storeState);
         return res.data.storeState;
       });
   };
