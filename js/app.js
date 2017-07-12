@@ -12,6 +12,8 @@ app.config(function($routeProvider, $locationProvider) {
   }).when('/contact-us', {
     templateUrl: 'templates/contact-us.html',
     controller: 'ContactUsController as vm'
+  }).when('/terms-of-service', {
+    templateUrl: 'templates/terms-of-service.html'
   });
 });
 
