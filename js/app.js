@@ -4,10 +4,11 @@ app.config(function($routeProvider, $locationProvider) {
   $routeProvider.when('/', {
     templateUrl: 'templates/orderForm.html',
     controller: 'OrderController as vm'
+  }).when('/how-it-works', {
+    templateUrl: 'templates/how-it-works.html'
   }).when('/frequently-asked-questions', {
-    templateUrl: 'templates/faq.html'
-  }).when('/about-us', {
-    templateUrl: 'templates/about-us.html'
+    templateUrl: 'templates/faq.html',
+    controller: 'FaqController as vm'
   }).when('/contact-us', {
     templateUrl: 'templates/contact-us.html',
     controller: 'ContactUsController as vm'
@@ -15,6 +16,8 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 app.constant('CONFIG', {
+  feeAmount: 7,
+  mainPhoneNumber: '425-835-1666',
   baseUrl: 'https://2vv8rth4gd.execute-api.us-east-2.amazonaws.com',
   stage: '/prod',
   stateEndpoint: '/state',

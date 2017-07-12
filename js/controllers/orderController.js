@@ -1,5 +1,6 @@
-app.controller('OrderController',['$scope', 'StateService', 'OrderService', function($scope, StateService, OrderService){
+app.controller('OrderController',['$scope', 'CONFIG', 'StateService', 'OrderService', function($scope, CONFIG, StateService, OrderService){
   var vm = this;
+  vm.feeAmount = CONFIG.feeAmount;
 
   vm.storeState = {storeOpen: true};
   StateService.getStoreState().then(function(storeState){
