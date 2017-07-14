@@ -16,7 +16,7 @@
       <textarea placeholder="What would you like?" ng-model="vm.order.orderDescription" class="form-field textarea-field" required ng-disabled="!vm.storeState.storeOpen"></textarea>
       <button type="submit" class="primary-button" ng-disabled="!vm.storeState.storeOpen">GET ME THAT</button>
     </form>
-    <div class="order-form-overlay" ng-class="{'order-form-busy': vm.orderFormBusy}">
+    <div class="form-overlay" ng-class="{'form-busy': vm.orderFormBusy}">
       <div class="message-container" ng-bind-html="vm.orderFormOverlayHtml"></div>
     </div>
   </div>

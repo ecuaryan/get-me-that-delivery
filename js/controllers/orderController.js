@@ -24,6 +24,11 @@ app.controller('OrderController',['$scope', 'CONFIG', 'StateService', 'OrderServ
     }, function(error){
       vm.orderFormBusy = false;
       vm.orderFormOverlayHtml = null;
+      iqwerty.toast.Toast("An error has occurred, please try again.", {
+        settings: {
+          duration: 50000
+        }
+      });
       console.error(error);
     });
   };
