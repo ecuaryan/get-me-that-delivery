@@ -24,5 +24,8 @@ app.constant('CONFIG', {
   stage: '/prod',
   stateEndpoint: '/state',
   orderEndpoint: '/order',
-  contactUsEndpoint: '/contact-us'
+  contactUsEndpoint: '/contact-us',
+  facebookUrl: 'https://www.facebook.com/getmethatdelivery',
+  twitterUrl: 'https://twitter.com/GETMETHAT_',
+  instagramUrl: 'https://www.instagram.com/getmethatdelivery/'
 });

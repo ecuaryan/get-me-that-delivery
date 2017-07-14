@@ -4,6 +4,7 @@
 
 body{
   font-family: raleway,sans-serif;
+  color: #444;
 }
 
 button{
@@ -176,6 +177,17 @@ button:focus {
   padding: 25px 0 35px 0;
   line-height: 35px;
   background-color: #f2f2f2;
+}
+
+#footer a {
+  color: inherit;
+}
+
+#footer a:hover,
+#footer a:active,
+#footer a:focus,
+#footer a:visited {
+  text-decoration: none;
 }
 
 .copyright{

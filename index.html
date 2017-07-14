@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="MainController as vm">
   <head>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
     <script src="/js/vendor/toast.min.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/controllers/mainController.js"></script>
     <script src="/js/controllers/orderController.js"></script>
     <script src="/js/controllers/faqController.js"></script>
     <script src="/js/controllers/contactUsController.js"></script>
@@ -41,7 +42,7 @@
               <div id="dropdownNav" ng-click="showDropdownNav = !showDropdownNav;">
                 <ul>
                   <li>
-                    <a ng-href="#/">Place Order</a>
+                    <a ng-href="#/">Place An Order</a>
                   </li>
                   <li>
                     <a ng-href="#/how-it-works">How It Works</a>
@@ -65,11 +66,17 @@
           <div class="col-md-3">
             <a ng-href="#/terms-of-service">Privacy & Terms</a>
           </div>
-          <div class="col-md-6 text-center copyright">&copy; 2017 GET ME THAT DELIVERY</div>
+          <div class="col-md-6 text-center copyright">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> GET ME THAT DELIVERY</div>
           <div class="col-md-3 social-media-links">
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <a ng-href="{{vm.facebookUrl}}" target="_blank">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+            <a ng-href="{{vm.twitterUrl}}" target="_blank">
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a ng-href="{{vm.instagramUrl}}" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
