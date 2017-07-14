@@ -88,7 +88,7 @@ button{
   position: relative;
 }
 
-#store-closed-overlay{
+.order-form-overlay{
   display: none;
   position: absolute;
   top: 0;
@@ -101,11 +101,11 @@ button{
   border-radius: 10px;
 }
 
-#store-closed-overlay.store-is-closed{
+.order-form-overlay.order-form-busy{
   display: block;
 }
 
-#store-closed-overlay .message-container{
+.order-form-overlay .message-container{
   position: relative;
   top: 50%;
   transform: translateY(-50%);

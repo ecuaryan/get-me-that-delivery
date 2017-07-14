@@ -6,6 +6,8 @@ app.factory('OrderService', function (CONFIG, $http) {
       .post(CONFIG.baseUrl + CONFIG.stage + CONFIG.orderEndpoint, order)
       .then(function (res) {
         return res;
+      }, function (error){
+        return error;
       });
   };
 
