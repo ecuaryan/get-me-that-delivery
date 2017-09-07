@@ -887,6 +887,9 @@ var MyApp = (function () {
     }
     MyApp.prototype.initializeApp = function () {
         var _this = this;
+        if ((this.platform.is('core') || this.platform.is('mobileweb'))) {
+            this.splashScreen.hide();
+        }
         this.platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
