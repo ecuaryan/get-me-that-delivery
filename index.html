@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-<html ng-app="app" ng-controller="MainController as vm">
-  <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <meta charset="UTF-8">
-    <meta name="viewport" id="theViewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Get Me That Delivery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="/css/styles.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
-    <script src="/js/vendor/toast.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/controllers/mainController.js"></script>
-    <script src="/js/controllers/orderController.js"></script>
-    <script src="/js/controllers/faqController.js"></script>
-    <script src="/js/controllers/contactUsController.js"></script>
-    <script src="/js/services/storeState.js"></script>
-    <script src="/js/factories/stateService.js"></script>
-    <script src="/js/factories/orderService.js"></script>
-    <script src="/js/factories/contactUsService.js"></script>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <a ng-href="#/" ng-click="showDropdownNav = false;">
-              <img src="/images/logo_white_border.png" id="logo">
-            </a>
-          </div>
-          <div class="col-sm-6 text-right" ng-class="{'showDropdownNav': showDropdownNav}">
-              <i id="header-nav-button" class="fa fa-bars header-nav" aria-hidden="true" ng-click="showDropdownNav = !showDropdownNav;"></i>
-              <div id="dropdownNav" ng-click="showDropdownNav = !showDropdownNav;">
-                <ul>
-                  <li>
-                    <a ng-href="#/">Place An Order</a>
-                  </li>
-                  <li>
-                    <a ng-href="#/how-it-works">How It Works</a>
-                  </li>
-                  <li>
-                    <a ng-href="#/frequently-asked-questions">FAQ's</a>
-                  </li>
-                  <li>
-                    <a ng-href="#/contact-us">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ng-view></ng-view>
-    <div id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <a ng-href="#/terms-of-service">Privacy & Terms</a>
-          </div>
-          <div class="col-md-6 text-center copyright">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> GET ME THAT DELIVERY</div>
-          <div class="col-md-3 social-media-links">
-            <a ng-href="{{vm.facebookUrl}}" target="_blank">
-              <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            </a>
-            <a ng-href="{{vm.twitterUrl}}" target="_blank">
-              <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            </a>
-            <a ng-href="{{vm.instagramUrl}}" target="_blank">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+<html lang="en" dir="ltr">
+<head>
+  <script data-ionic="inject">
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.5.3';i.angular='4.1.3';i.staticDir='build/';})(window);
+  </script>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+
+  <!-- cordova.js required for cordova apps -->
+  <script src="cordova.js"></script>
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
+
+  <link href="build/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+
+</body>
 </html>
