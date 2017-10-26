@@ -18,7 +18,7 @@ under the License.
 */
 
 // Note, these will be updated automatically at build time
-var CACHE_VERSION = '1508985445912';
+var CACHE_VERSION = '1508986508855';
 var CACHE_LIST = [
     "/assets/.DS_Store",
     "/assets/fonts/FontAwesome.otf",
