@@ -59,6 +59,14 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-safariviewcontroller/www/SafariViewController.js",
+        "id": "cordova-plugin-safariviewcontroller.SafariViewController",
+        "pluginId": "cordova-plugin-safariviewcontroller",
+        "clobbers": [
+            "SafariViewController"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -70,7 +78,9 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.2.2",
     "cordova-plugin-whitelist": "1.3.1",
-    "ionic-plugin-keyboard": "2.2.1"
+    "ionic-plugin-keyboard": "2.2.1",
+    "cordova-plugin-safariviewcontroller": "1.4.7",
+    "cordova-plugin-customurlscheme": "4.3.0"
 }
 // BOTTOM OF METADATA
 });

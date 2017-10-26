@@ -18,7 +18,7 @@ under the License.
 */
 
 // Note, these will be updated automatically at build time
-var CACHE_VERSION = '1507771713648';
+var CACHE_VERSION = '1508985445912';
 var CACHE_LIST = [
     "/assets/.DS_Store",
     "/assets/fonts/FontAwesome.otf",
@@ -68,6 +68,7 @@ var CACHE_LIST = [
     "/plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
     "/plugins/cordova-plugin-device/www/device.js",
     "/plugins/cordova-plugin-ionic/www/common.js",
+    "/plugins/cordova-plugin-safariviewcontroller/www/SafariViewController.js",
     "/plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js",
     "/plugins/cordova-plugin-splashscreen/www/splashscreen.js",
     "/plugins/cordova-plugin-statusbar/src/browser/StatusBarProxy.js",
